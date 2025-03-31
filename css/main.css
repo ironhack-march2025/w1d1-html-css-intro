@@ -1,0 +1,72 @@
+
+/******************/
+/* Type selectors */
+/******************/
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+
+
+/****************/
+/* Id Selectors */
+/****************/
+
+#main-header {
+    margin: 0;
+    background-color: #bbe9f1;
+    padding: 20px;
+}
+
+
+/*******************/
+/* Class Selectors */
+/*******************/
+
+.course-summary {
+    border: 1px solid #333;
+    background-color: #eee;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.featured { /* also: .course-summary.featured */
+    background-color: #7da5e6;
+}
+
+
+/***************/
+/* Descendants */
+/***************/
+
+/* every img tag which is a descendant of an element with the class "course-summary" */
+.course-summary img {
+    max-height: 140px;
+    width: auto;
+}
+
+
+/**************************/
+/* Example of specificity */
+/**************************/
+
+
+#banner {
+    background-color: green;
+}
+
+.box {
+    background-color: yellow !important;
+}
+
