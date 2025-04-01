@@ -1,4 +1,10 @@
 
+
+:root {
+    --main-color: #333; /* custom property */
+}
+
+
 /******************/
 /* Type selectors */
 /******************/
@@ -7,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #333;
+    color: var(--main-color);
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
@@ -34,7 +40,7 @@ h1 {
 /*******************/
 
 .course-summary {
-    border: 1px solid #333;
+    border: 1px solid var(--main-color);
     background-color: #eee;
     margin: 20px;
     padding: 20px;
@@ -56,6 +62,10 @@ h1 {
     width: auto;
 }
 
+.course-summary img:hover {
+    box-shadow: 2px 2px 15px 2px var(--main-color);
+    transition: all 0.5s;
+}
 
 /**************************/
 /* Example of specificity */
@@ -68,5 +78,27 @@ h1 {
 
 .box {
     background-color: yellow !important;
+}
+
+
+/**********************/
+/* Multiple selection */
+/**********************/
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+section, .box {
+    transition: all 1px;
+}
+
+/*****************/
+/* Mixing things */
+/*****************/
+
+.todo-list > li, 
+.item {
+    text-shadow: 2px 2px #ccc;
 }
 
